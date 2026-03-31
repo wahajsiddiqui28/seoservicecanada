@@ -1,0 +1,1 @@
+/* Placeholder — theme images directory */
