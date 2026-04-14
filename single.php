@@ -85,7 +85,7 @@ get_header();
             </header>
 
             <?php if (has_post_thumbnail()) : ?>
-                <figure class="ssc-single__featured" itemprop="image">
+                <figure class="ssc-single__featured mt-4" itemprop="image">
                     <div class="container">
                         <div class="ssc-single__featured-inner">
                             <?php the_post_thumbnail('ssc-hero', array(

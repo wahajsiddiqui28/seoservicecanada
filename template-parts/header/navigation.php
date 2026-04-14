@@ -102,6 +102,7 @@ function ssc_fallback_menu()
     echo '<ul class="navbar-nav ms-auto align-items-lg-center">';
     echo '<li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/')) . '">' . esc_html__('Home', 'seoservicecanada') . '</a></li>';
     echo '<li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('#about')) . '">' . esc_html__('About', 'seoservicecanada') . '</a></li>';
+        echo '<li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/blogs')) . '">' . esc_html__('Blogs', 'seoservicecanada') . '</a></li>';
     // echo '<li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/contact/')) . '">' . esc_html__('Contact', 'seoservicecanada') . '</a></li>';
     echo '</ul>';
 }

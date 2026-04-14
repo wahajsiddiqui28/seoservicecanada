@@ -212,8 +212,8 @@ if (!defined('ABSPATH')) {
                         </div>
                         <div class="ssc-contact-info-item__content">
                             <span class="ssc-contact-info-item__label">Office</span>
-                            <span class="ssc-contact-info-item__value">123 SEO Boulevard, Suite 400</span>
-                            <span class="ssc-contact-info-item__note">Toronto, ON M5A 1B1, Canada</span>
+                            <span class="ssc-contact-info-item__value">123 SEO Street, Toronto, ON, Canada</span>
+                            <!-- <span class="ssc-contact-info-item__note">Toronto, ON M5A 1B1, Canada</span> -->
                         </div>
                     </div>
 
@@ -223,7 +223,7 @@ if (!defined('ABSPATH')) {
                         </div>
                         <div class="ssc-contact-info-item__content">
                             <span class="ssc-contact-info-item__label">WhatsApp</span>
-                            <a href="https://wa.me/<?php echo esc_attr(SSC_WHATSAPP); ?>" class="ssc-contact-info-item__value" target="_blank" rel="noopener noreferrer">Chat with us instantly</a>
+                            <a href="https://wa.me/16469165108" class="ssc-contact-info-item__value" target="_blank" rel="noopener noreferrer">Chat with us instantly</a>
                             <span class="ssc-contact-info-item__note">Quick responses available</span>
                         </div>
                     </div>
