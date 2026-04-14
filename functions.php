@@ -21,11 +21,11 @@ define('SSC_THEME_URI', get_template_directory_uri());
 /**
  * Global contact details — change here, updates everywhere.
  */
-define('SSC_PHONE', '+1 (646) 916-5108');
-define('SSC_PHONE_RAW', '+16469165108');
+define('SSC_PHONE', '+1 (780) 200-9020');
+define('SSC_PHONE_RAW', '+17802009020');
 define('SSC_EMAIL', 'info@seoservicecanada.com');
-define('SSC_WHATSAPP', '16469165108');
-define('SSC_ADDRESS', '123 SEO Boulevard, Suite 400, Toronto, ON M5A 1B1, Canada');
+define('SSC_WHATSAPP', '17802009020');
+define('SSC_ADDRESS', '2380 Kelly Circle SW Edmonton, Alberta T6W4G3 Canada');
 
 /**
  * Include theme setup files.
@@ -36,6 +36,8 @@ require_once SSC_THEME_DIR . '/inc/helpers.php';
 require_once SSC_THEME_DIR . '/inc/seo-functions.php';
 require_once SSC_THEME_DIR . '/inc/custom-fields.php';
 require_once SSC_THEME_DIR . '/inc/internal-linking.php';
+require_once SSC_THEME_DIR . '/inc/province-data.php';
+require_once SSC_THEME_DIR . '/inc/create-province-pages.php';
 
 /**
  * Include template parts with classes.

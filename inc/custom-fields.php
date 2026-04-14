@@ -90,9 +90,10 @@ function ssc_seo_meta_callback($post)
 {
     wp_nonce_field('ssc_save_seo_meta', 'ssc_seo_nonce');
 
-    $subtitle = get_post_meta($post->ID, '_ssc_subtitle', true);
-    $city     = get_post_meta($post->ID, '_ssc_location_city', true);
-    $province = get_post_meta($post->ID, '_ssc_location_province', true);
+    $subtitle     = get_post_meta($post->ID, '_ssc_subtitle', true);
+    $city         = get_post_meta($post->ID, '_ssc_location_city', true);
+    $province     = get_post_meta($post->ID, '_ssc_location_province', true);
+    $province_key = get_post_meta($post->ID, '_ssc_province_key', true);
 
     echo '<table class="form-table">';
 
@@ -104,6 +105,10 @@ function ssc_seo_meta_callback($post)
 
     echo '<tr><th><label for="ssc_province">' . esc_html__('Province', 'seoservicecanada') . '</label></th>';
     echo '<td><input type="text" id="ssc_province" name="ssc_province" value="' . esc_attr($province) . '" class="widefat"></td></tr>';
+
+    echo '<tr><th><label for="ssc_province_key">' . esc_html__('Province Key (Province SEO Pages)', 'seoservicecanada') . '</label></th>';
+    echo '<td><input type="text" id="ssc_province_key" name="ssc_province_key" value="' . esc_attr($province_key) . '" class="widefat">';
+    echo '<p class="description">e.g. ontario, british-columbia, alberta, quebec, saskatchewan, manitoba, nova-scotia, new-brunswick, newfoundland-and-labrador, prince-edward-island</p></td></tr>';
 
     echo '</table>';
 }
@@ -141,6 +146,9 @@ function ssc_save_meta_boxes($post_id)
         }
         if (isset($_POST['ssc_province'])) {
             update_post_meta($post_id, '_ssc_location_province', sanitize_text_field($_POST['ssc_province']));
+        }
+        if (isset($_POST['ssc_province_key'])) {
+            update_post_meta($post_id, '_ssc_province_key', sanitize_text_field($_POST['ssc_province_key']));
         }
     }
 }
