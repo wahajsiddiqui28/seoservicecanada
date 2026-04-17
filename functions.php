@@ -38,6 +38,7 @@ require_once SSC_THEME_DIR . '/inc/custom-fields.php';
 require_once SSC_THEME_DIR . '/inc/internal-linking.php';
 require_once SSC_THEME_DIR . '/inc/province-data.php';
 require_once SSC_THEME_DIR . '/inc/create-province-pages.php';
+require_once SSC_THEME_DIR . '/inc/form-handler.php';
 
 /**
  * Include template parts with classes.
