@@ -25,7 +25,7 @@ if (! defined('ABSPATH')) {
                 <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn ssc-btn-primary btn-lg">
                     <?php esc_html_e('Get Your Free Quote', 'seoservicecanada'); ?>
                 </a>
-                <a href="tel:+1-000-000-0000" class="btn ssc-btn-outline btn-lg">
+                <a href="tel:<?php echo esc_attr(SSC_PHONE_RAW); ?>" class="btn ssc-btn-outline btn-lg">
                     <?php esc_html_e('Call Us Today', 'seoservicecanada'); ?>
                 </a>
             </div>

@@ -100,8 +100,18 @@ class SSC_Bootstrap_Nav_Walker extends Walker_Nav_Menu
 function ssc_fallback_menu()
 {
     echo '<ul class="navbar-nav ms-auto align-items-lg-center">';
-    echo '<li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/')) . '">' . esc_html__('Home', 'seoservicecanada') . '</a></li>';
-    echo '<li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/about/')) . '">' . esc_html__('About', 'seoservicecanada') . '</a></li>';
-    echo '<li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/contact/')) . '">' . esc_html__('Contact', 'seoservicecanada') . '</a></li>';
+    ssc_fallback_menu_items();
     echo '</ul>';
+}
+
+/**
+ * Fallback menu — items only (no <ul> wrapper).
+ * Used when wp_nav_menu items_wrap is set to %3$s.
+ */
+function ssc_fallback_menu_items()
+{
+    echo '<li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/')) . '">' . esc_html__('Home', 'seoservicecanada') . '</a></li>';
+    echo '<li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('#about')) . '">' . esc_html__('About', 'seoservicecanada') . '</a></li>';
+    echo '<li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/our-team')) . '">' . esc_html__('Our Team', 'seoservicecanada') . '</a></li>';
+    echo '<li class="nav-item"><a class="nav-link" href="' . esc_url(home_url('/blogs')) . '">' . esc_html__('Blogs', 'seoservicecanada') . '</a></li>';
 }

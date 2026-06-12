@@ -196,3 +196,16 @@ function ssc_truncate_words($text, $limit = 20)
 {
     return wp_trim_words($text, $limit, '&hellip;');
 }
+
+/**
+ * Output the global SEO Audit form card.
+ *
+ * Usage anywhere in a template:
+ *   <?php ssc_audit_form(); ?>
+ *
+ * @since 1.0.0
+ */
+function ssc_audit_form()
+{
+    get_template_part('template-parts/global/audit-form');
+}

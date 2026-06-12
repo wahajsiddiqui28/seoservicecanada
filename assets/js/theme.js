@@ -106,6 +106,34 @@
     }
 
     /**
+     * Contact form progress bar — fills as user completes fields.
+     */
+    function initContactFormProgress() {
+        var form = document.getElementById('sscContactForm');
+        var bar = document.getElementById('contactFormProgress');
+        if (!form || !bar) return;
+
+        var fields = form.querySelectorAll('input[required], textarea[required], select[required]');
+        var allFields = form.querySelectorAll('input, textarea, select');
+
+        function updateProgress() {
+            var filled = 0;
+            allFields.forEach(function (field) {
+                if (field.value && field.value.trim() !== '' && !field.disabled) {
+                    filled++;
+                }
+            });
+            var percent = Math.round((filled / allFields.length) * 100);
+            bar.style.width = percent + '%';
+        }
+
+        allFields.forEach(function (field) {
+            field.addEventListener('input', updateProgress);
+            field.addEventListener('change', updateProgress);
+        });
+    }
+
+    /**
      * Initialize everything on DOM ready.
      */
     document.addEventListener('DOMContentLoaded', function () {
@@ -113,6 +141,7 @@
         initSmoothScroll();
         initScrollAnimations();
         initBackToTop();
+        initContactFormProgress();
     });
 
 })();

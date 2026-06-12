@@ -40,5 +40,8 @@ get_header();
 <!-- Final CTA Section -->
 <?php get_template_part('template-parts/sections/home/section', 'final-cta'); ?>
 
+<!-- Service Areas — Locations Section -->
+<?php get_template_part('template-parts/sections/home/section', 'locations'); ?>
+
 <?php
 get_footer();
