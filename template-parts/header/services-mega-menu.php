@@ -34,6 +34,11 @@ $ssc_get_prov_url = function ($slug) use ($ssc_provinces_with_pages) {
         ? home_url('/' . $slug . '-seo-services/')
         : '#';
 };
+
+// Helper to get premium service page URL (pages live under /seo-services/).
+$ssc_svc_url = function ($slug) {
+    return home_url('/seo-services/' . $slug . '/');
+};
 ?>
 
 <!-- FontAwesome for mega menu icons -->
@@ -141,7 +146,7 @@ $ssc_get_prov_url = function ($slug) use ($ssc_provinces_with_pages) {
                             <div class="col-lg-4 ssc-mm__group">
                                 <h6 class="ssc-mm__group-title">On/Off Page Audits</h6>
                                 <ul class="ssc-mm__list">
-                                    <li><a href="#"><i class="fas fa-file-alt"></i>On-Page SEO Audit</a></li>
+                                    <li><a href="<?php echo esc_url($ssc_svc_url('on-page-seo-services')); ?>"><i class="fas fa-file-alt"></i>On-Page SEO Audit</a></li>
                                     <li><a href="#"><i class="fas fa-external-link-alt"></i>Off-Page SEO Audit</a></li>
                                     <li><a href="#"><i class="fas fa-link"></i>Backlink Checkup</a></li>
                                 </ul>
@@ -150,7 +155,7 @@ $ssc_get_prov_url = function ($slug) use ($ssc_provinces_with_pages) {
                                 <h6 class="ssc-mm__group-title">Technical &amp; AI</h6>
                                 <ul class="ssc-mm__list">
                                     <li><a href="#"><i class="fas fa-cogs"></i>Technical SEO Audit</a></li>
-                                    <li><a href="#"><i class="fab fa-shopify"></i>Shopify Technical Audit</a></li>
+                                    <li><a href="<?php echo esc_url($ssc_svc_url('shopify-seo-services')); ?>"><i class="fab fa-shopify"></i>Shopify Technical Audit</a></li>
                                     <li><a href="#"><i class="fas fa-robot"></i>AI SEO Scan</a></li>
                                 </ul>
                             </div>
@@ -160,7 +165,7 @@ $ssc_get_prov_url = function ($slug) use ($ssc_provinces_with_pages) {
                             <div class="col-lg-4 ssc-mm__group">
                                 <h6 class="ssc-mm__group-title">Local &amp; Competitive</h6>
                                 <ul class="ssc-mm__list">
-                                    <li><a href="#"><i class="fas fa-map-marked-alt"></i>Local SEO Audit</a></li>
+                                    <li><a href="<?php echo esc_url($ssc_svc_url('local-seo-services')); ?>"><i class="fas fa-map-marked-alt"></i>Local SEO Audit</a></li>
                                     <li><a href="#"><i class="fas fa-users-cog"></i>Competitor Scan</a></li>
                                 </ul>
                             </div>
@@ -182,9 +187,10 @@ $ssc_get_prov_url = function ($slug) use ($ssc_provinces_with_pages) {
                             <div class="col-lg-4 ssc-mm__group">
                                 <h6 class="ssc-mm__group-title">On-Site Mastery</h6>
                                 <ul class="ssc-mm__list">
-                                    <li><a href="#"><i class="fas fa-laptop"></i>On-Page SEO</a></li>
+                                    <li><a href="<?php echo esc_url($ssc_svc_url('on-page-seo-services')); ?>"><i class="fas fa-laptop"></i>On-Page SEO</a></li>
                                     <li><a href="#"><i class="fas fa-keyboard"></i>Content Writing</a></li>
                                     <li><a href="#"><i class="fas fa-tags"></i>Metadata Optimization</a></li>
+                                    <li><a href="<?php echo esc_url($ssc_svc_url('seo-consulting-services')); ?>"><i class="fas fa-user-tie"></i>SEO Consulting Services</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-4 ssc-mm__group">
@@ -199,7 +205,8 @@ $ssc_get_prov_url = function ($slug) use ($ssc_provinces_with_pages) {
                                 <h6 class="ssc-mm__group-title">Authority Building</h6>
                                 <ul class="ssc-mm__list">
                                     <li><a href="#"><i class="fas fa-link"></i>Off-Page / Links</a></li>
-                                    <li><a href="#"><i class="fas fa-map-marker-alt"></i>Local Maps SEO</a></li>
+                                    <li><a href="<?php echo esc_url($ssc_svc_url('local-seo-services')); ?>"><i class="fas fa-map-marker-alt"></i>Local Maps SEO</a></li>
+                                    <li><a href="<?php echo esc_url($ssc_svc_url('local-seo-services')); ?>"><i class="fas fa-map-marked-alt"></i>Local SEO Services</a></li>
                                     <li><a href="#"><i class="fas fa-pen-fancy"></i>SEO Content Creation</a></li>
                                 </ul>
                             </div>
@@ -214,7 +221,8 @@ $ssc_get_prov_url = function ($slug) use ($ssc_provinces_with_pages) {
                                 <h6 class="ssc-mm__group-title">Food &amp; Retail</h6>
                                 <ul class="ssc-mm__list">
                                     <li><a href="#"><i class="fas fa-utensils"></i>Restaurant SEO</a></li>
-                                    <li><a href="#"><i class="fas fa-shopping-cart"></i>E-Commerce SEO</a></li>
+                                    <li><a href="<?php echo esc_url($ssc_svc_url('ecommerce-seo-services')); ?>"><i class="fas fa-shopping-cart"></i>E-Commerce SEO</a></li>
+                                    <li><a href="<?php echo esc_url($ssc_svc_url('shopify-seo-services')); ?>"><i class="fab fa-shopify"></i>Shopify SEO</a></li>
                                     <li><a href="#"><i class="fas fa-gem"></i>Jewelry SEO</a></li>
                                 </ul>
                             </div>
@@ -242,7 +250,8 @@ $ssc_get_prov_url = function ($slug) use ($ssc_provinces_with_pages) {
                                 <h6 class="ssc-mm__group-title">Professional</h6>
                                 <ul class="ssc-mm__list">
                                     <li><a href="#"><i class="fas fa-gavel"></i>Lawyer SEO</a></li>
-                                    <li><a href="#"><i class="fas fa-tooth"></i>Dental SEO</a></li>
+                                    <li><a href="<?php echo esc_url($ssc_svc_url('dental-seo-services')); ?>"><i class="fas fa-tooth"></i>Dental SEO</a></li>
+                                    <li><a href="<?php echo esc_url($ssc_svc_url('seo-consulting-services')); ?>"><i class="fas fa-user-tie"></i>SEO Consulting</a></li>
                                 </ul>
                             </div>
                             <div class="col ssc-mm__group">
@@ -257,7 +266,7 @@ $ssc_get_prov_url = function ($slug) use ($ssc_provinces_with_pages) {
                                 <h6 class="ssc-mm__group-title">Retail &amp; Food</h6>
                                 <ul class="ssc-mm__list">
                                     <li><a href="#"><i class="fas fa-utensils"></i>Restaurant</a></li>
-                                    <li><a href="#"><i class="fas fa-shopping-bag"></i>E-commerce</a></li>
+                                    <li><a href="<?php echo esc_url($ssc_svc_url('ecommerce-seo-services')); ?>"><i class="fas fa-shopping-bag"></i>E-commerce</a></li>
                                     <li><a href="#"><i class="fas fa-gem"></i>Jewelry</a></li>
                                 </ul>
                             </div>

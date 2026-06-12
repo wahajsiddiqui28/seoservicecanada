@@ -21,6 +21,7 @@ function ssc_get_service_page_data($key) {
         // =============================================
         'ecommerce-seo-services' => array(
             'name'        => 'Ecommerce SEO Services',
+            'layout'      => 'a',
             'accent'      => '#7c3aed',
             'accent_dark' => '#5b21b6',
 
@@ -111,6 +112,7 @@ function ssc_get_service_page_data($key) {
         // =============================================
         'local-seo-services' => array(
             'name'        => 'Local SEO Services',
+            'layout'      => 'b',
             'accent'      => '#0e7c61',
             'accent_dark' => '#065f46',
 
@@ -205,6 +207,7 @@ function ssc_get_service_page_data($key) {
         // =============================================
         'shopify-seo-services' => array(
             'name'        => 'Shopify SEO Services',
+            'layout'      => 'c',
             'accent'      => '#16a34a',
             'accent_dark' => '#15803d',
 
@@ -293,6 +296,7 @@ function ssc_get_service_page_data($key) {
         // =============================================
         'seo-consulting-services' => array(
             'name'        => 'SEO Consulting Services',
+            'layout'      => 'd',
             'accent'      => '#302e9d',
             'accent_dark' => '#1e1b4b',
 
@@ -381,6 +385,7 @@ function ssc_get_service_page_data($key) {
         // =============================================
         'dental-seo-services' => array(
             'name'        => 'Dental SEO Services',
+            'layout'      => 'e',
             'accent'      => '#0891b2',
             'accent_dark' => '#0e7490',
 
@@ -472,6 +477,7 @@ function ssc_get_service_page_data($key) {
         // =============================================
         'on-page-seo-services' => array(
             'name'        => 'On-Page SEO Services',
+            'layout'      => 'f',
             'accent'      => '#bf2021',
             'accent_dark' => '#7f1d1d',
 
